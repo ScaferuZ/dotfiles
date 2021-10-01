@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/fruz/.config/nvim.bak'
+let g:netrw_dirhist_3='/home/fruz/.config/nvim.bak/keys'
+let g:netrw_dirhist_2='/home/fruz/.config/nvim.bak'
+let g:netrw_dirhist_1='/home/fruz/.config/nvim.bak/keys'
+let g:netrw_dirhist_0='/home/fruz/.config/nvim.bak'
+let g:netrw_dirhist_9='/Users/fruz/Documents/code/dicoding/web-dasar-submission'
+let g:netrw_dirhist_8='/Users/fruz/Documents/code/dicoding/web-dasar-submission/styles'
+let g:netrw_dirhist_7='/Users/fruz/Documents/code/dicoding/web-dasar-submission'
+let g:netrw_dirhist_6='/Users/fruz/Documents/code/dicoding/web-dasar-submission/assets'
+let g:netrw_dirhist_5='/Users/fruz/Documents/code/dicoding/web-dasar-submission'
