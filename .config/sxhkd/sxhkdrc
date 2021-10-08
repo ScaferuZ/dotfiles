@@ -6,7 +6,7 @@
 
 # Focus next/prev window
 super + {_,shift + }f
-    bspc node -f {next,prev}.local.!hidden.window
+   bspc node -f {next,prev}.local.!hidden.window
 
 # Fullscreen window with gaps
 super + b
@@ -22,7 +22,7 @@ super + c
 
 # Move to or send window to workspace #
 super + {_,shift + }{1-8}
-	bspc {desktop -f,node -d} '^{1-8}'
+	bspc {desktop -f,node -d} '^{1-8}' --follow
 
 # Resize window
 super + shift + {h,j,k,l}
@@ -32,7 +32,7 @@ super + alt + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # Set window state
-super + {alt + t,shift + t,space,f}
+super + {alt + t,shift + t,space,a}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # Add focused window to a tabbed instance
@@ -91,3 +91,41 @@ XF86MonBrightness{Up,Down}
 # Quit and restart bspwm
 super + alt + {q,shift + }r
     bspc {quit,wm -r}
+
+# reload bspwm
+super + shift + e
+    bspc wm -r
+
+# reload sxhkdrc
+super + shift + r
+    pkill -USR1 -x sxhkd
+
+# move current window to a pre-selected space
+super + shift + m
+    bspc node -n last.!automatic
+
+# Rotate tree
+super + shift + {d,a}
+    bspc node @/ -C {forward,backward}
+
+# Expand/contract a window by moving one of its side outward/inward
+super + s : {h,j,k,l}
+    STEP=20; SELECTION={1,2,3,4}; \
+    bspc node -z $(echo "left -$STEP 0,bottom 0 $STEP,top 0 -$STEP,right $STEP 0" | cut -d',' -f$SELECTION) || \
+    bspc node -z $(echo "right -$STEP 0,top 0 $STEP,bottom 0 -$STEP,left $STEP 0" | cut -d',' -f$SELECTION)
+
+# Close screen
+super + shift + c
+    sleep 0.5; xset dpms force standby
+
+# Lock screen
+super + shift + x
+    betterlockscreen -l dim -t ''
+
+# opeen chrome 
+super + o
+    google-chrome
+
+# open vscode
+super + i 
+    code

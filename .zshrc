@@ -5,7 +5,7 @@ setopt no_list_ambiguous
 # Setting up Defaults
 export EDITOR='nvim'
 export TERMINAL='alacritty'
-export BROWSER='firefox'
+export BROWSER='google-chrome'
 export MANPAGER='nvim +Man!'
 export PATH=/opt/firefox/firefox:$PATH
 export PATH="$PATH:[/home/fruz/snap/flutter]/bin"
@@ -27,8 +27,10 @@ zstyle ':vcs_info:*' enable git
 # Aliases
 ## App launchers
 alias tsm='transmission-remote'
-alias s='startx'
 alias v='nvim'
+alias b='nvim ~/.config/bspwm/bspwmrc'
+alias zsh='nvim ~/.zshrc'
+alias s='nvim ~/.config/sxhkd/sxhkdrc'
 alias f='ranger'
 alias tty='tty-clock -C6 -c -t'
 alias pac='sudo pacman'
@@ -37,8 +39,11 @@ alias weather='clear && curl wttr.in'
 alias shot='flameshot gui'
 alias kill='killall -q'
 alias w='feh --bg-fill --randomize ~/Media/wallpapers/maller/'
-alias scrn= 'redshift'
+alias scrn='redshift'
 alias note='nvpy'
+
+alias warp='warp-cli connect'
+alias warpdc='warp-cli disconnect'
 
 ## Terminal maintenance
 alias rec='gpg --recv-keys --keyserver hkp://pgp.mit.edu'
@@ -57,7 +62,7 @@ alias v5='date +"%R - %a, %B %d, %Y" | xclip -select clipboard; cd ~/Dropbox/wri
 ## Snippets
 alias ddate='date +"%R - %a, %B %d, %Y" | xclip -select clipboard && date +"%R - %a, %B %d, %Y"' 
 
-. z/z.sh
+. /home/fruz/misc/z/z.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
