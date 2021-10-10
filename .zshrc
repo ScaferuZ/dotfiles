@@ -45,6 +45,8 @@ alias note='nvpy'
 alias warp='warp-cli connect'
 alias warpdc='warp-cli disconnect'
 
+alias flutrun='flutter run -d chrome --web-renderer canvaskit'
+
 ## Terminal maintenance
 alias rec='gpg --recv-keys --keyserver hkp://pgp.mit.edu'
 alias todo='cat ~/notes/todo.md'
