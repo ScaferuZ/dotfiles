@@ -1,0 +1,40 @@
+export EDITOR='nvim'
+export TERMINAL='alacritty'
+
+
+# Aliases
+alias v='nvim'
+alias pac='sudo pacman'
+alias a="sudo modprobe -r psmouse"
+
+
+autoload -Uz compinit
+compinit
+eval "$(starship init zsh)"
+# End of lines added by compinstall:w
+#
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/usr/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    # eval "$__conda_setup"
+else
+    if [ -f "/usr/etc/profile.d/conda.sh" ]; then
+        . "/usr/etc/profile.d/conda.sh"
+    else
+        export PATH="/usr/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# see https://unix.stackexchange.com/a/295652/332452
+source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
+
+# see https://wiki.archlinux.org/title/GNOME/Keyring#xinitrc
+# eval $(/usr/bin/gnome-keyring-daemon --start)
+export SSH_AUTH_SOCK
+
+# see https://github.com/NixOS/nixpkgs/issues/14966#issuecomment-520083836
+mkdir -p "$HOME"/.local/share/keyrings
