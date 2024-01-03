@@ -24,13 +24,21 @@ static const char dmenufont[] = "JetBrains Mono Nerd Font:size=10";
 static const char col_dark[] = "#11222c";
 static const char col_darkgreen[] = "#1C5858";
 static const char col_midgreen[] = "#5E8D83";
-static const char col_white[] = "#BAFDFE";
+static const char col_white[] = "#ebdbb2";
 static const char col_blue[] = "#53B1B1";
+/* Gruvbox theme */
+static const char col_gray1[]       = "#282828";
+static const char col_gray2[]       = "#504945";
+static const char col_gray3[]       = "#bdae93";
+static const char col_gray4[]       = "#ebdbb2";
+static const char col_cyan[]        = "#cc241d";
 static const char *colors[][3] = {
     /*               fg         bg         border   */
-    [SchemeNorm] = {col_midgreen, col_dark, col_darkgreen},
-    [SchemeSel] = {col_white, col_blue, col_blue},
-    [SchemeTitle] = {col_white, col_blue, col_blue},
+    /*[SchemeNorm] = {col_midgreen, col_dark, col_darkgreen}, */
+    /*[SchemeSel] = {col_white, col_blue, col_blue}, */
+    [SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
+    [SchemeSel] = { col_gray4, col_gray2, col_gray1},
+    [SchemeTitle] = {col_white, col_gray2, col_gray1},
 };
 
 /* tagging */
