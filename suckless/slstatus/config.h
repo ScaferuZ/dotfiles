@@ -65,11 +65,10 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-  { kernel_release, "^c#f6c634^  Debian %s  ", NULL },
-  { run_command, "^c#53b1b1^  [ Updates : %s ] ",  "aptitude search '~U' | wc -l" },
-	{ cpu_perc, "^c#53b1b1^ [ CPU %s%%  ]", 	NULL },
-	{ ram_perc, "^c#53b1b1^  [ RAM %s%%  ]",	 NULL },
-	{ battery_perc, "^c#53b1b1^  [ BAT %s%%  ]",	 "BAT0"},
+  { run_command, "^c#ebdbb2^  [ Updates : %s ] ",  "aptitude search '~U' | wc -l" },
+	{ cpu_perc, "^c#ebdbb2^ [ CPU %s%%  ]", 	NULL },
+	{ ram_perc, "^c#ebdbb2^  [ RAM %s%%  ]",	 NULL },
+	{ battery_perc, "^c#ebdbb2^  [ BAT %s%%  ]",	 "BAT0"},
 	{ datetime, "^c#f6c634^  %s", 		"%a %b %-d" },
-	{ datetime, "^c#bafdfe^ %s", 		"%l:%M %p" },
+	{ datetime, "^c#ebdbb2^ %s", 		"%l:%M %p" },
 };
